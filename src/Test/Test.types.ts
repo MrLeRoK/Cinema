@@ -1,3 +1,8 @@
+// ts
+// React.ReactNode // boolean, string, number, jsxElement
+// React.JSX.Element
+// React.Element
+
 import React from "react";
 
 type TPropsExtends = {
