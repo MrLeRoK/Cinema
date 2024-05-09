@@ -1,35 +1,56 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+// ts
+// React.ReactNode // boolean, string, number, jsxElement
+// React.JSX.Element
+// React.Element
 
-function App() {
-  const [count, setCount] = useState(0)
+// Функция как дочерний элемент
+import React from "react";
 
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+interface IMovies {
+    id: string;
+    alternativeTitle: string;
+    posterUrl: string;
+    rating: number;
+    title: string;
+    type: string;
+    year: number;
+
+// {
+//     "id": "string",
+//     "title": "string",
+//     "alternativeTitle": "string",
+//     "type": "string",
+//     "year": int,
+//     "rating": float,
+//     "posterUrl": "string"
+// },
+
 }
 
-export default App
+// 'https://kinobox.tv/api/films/popular?type=series' - только сериалы
+export default function App() {
+    const [movie, setMovie] = React.useState<IMovies[]>([])
+
+    React.useEffect(() => {
+        fetch('https://kinobox.tv/api/films/popular')
+            .then(res => res.json())
+            .then(data => setMovie(data))
+            .catch(e => console.error('error', e))
+
+    }, [])
+
+    console.log(movie)
+
+    return (
+
+        <>
+            <div>
+
+                {
+
+                }
+            </div>
+        </>
+    )
+}
+
