@@ -1,43 +1,16 @@
-// import {MoviesApi} from "./service-api/MoviesApi.tsx";
-// import {SeriesApi} from "./service-api/SeriesApi.tsx";
-
-import {MoviesApi} from "./service-api/MoviesApi.tsx";
-import {useEffect, useState} from "react";
-
-
-interface IMovies {
-    id: string;
-    alternativeTitle: string;
-    posterUrl: string;
-    rating: number;
-    title: string;
-    type: string;
-    year: number;
-
-
-}
+import useFetch from "./hooks/useFetch.ts";
+import {Movies} from "./components/Movies.tsx";
+import {Series} from "./components/Series.tsx";
 
 export default function App() {
-    const [movies, setMovies] = useState<IMovies[]>([])
-
-        const loadMovies = async () => {
-            try {
-                const moviesData = await MoviesApi();
-                setMovies(moviesData)
-                console.log(moviesData);
-            } catch (error) {
-                console.error(error);
-            }
-        }
-
-        loadMovies();
-
+    const {data: series} = useFetch('series')
+    const {data: movies} = useFetch('film')
 
     return (
 
-        <> {movies}
-            {/*<MoviesApi/>*/}
-            {/*<SeriesApi/>*/}
+        <>
+              <Series data={series}/>
+              <Movies data={movies}/>
         </>
     )
 }
