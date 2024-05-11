@@ -29,6 +29,7 @@ export const SeriesApi = () => {
             const response = await fetch('https://kinobox.tv/api/films/popular?type=series')
             const series = await response.json()
             setSeries(series)
+            console.log(series)
         }
         fetchSeries()
     }, []);
