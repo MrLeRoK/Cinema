@@ -1,0 +1,31 @@
+.control {
+    display: flex;
+    align-items: revert;
+    justify-content: revert;
+
+}
+button {
+    width: 200px;
+    height: 30px;
+    font-size: 16px;
+    border: none;
+    margin-bottom: 32px;
+    color: #ddd;
+    background: rgba(7, 1, 1, 0.27);
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:focus {
+        background: black;
+        color: #dddddd;
+
+    }
+
+    &:hover{
+        opacity: 0.8;
+    }
+
+}
+
+
+

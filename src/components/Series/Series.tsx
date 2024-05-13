@@ -1,16 +1,17 @@
-import {ISeries} from "../hooks/useFetch.ts";
-
-
+import {ISeries} from "../../hooks/useFetch.ts";
 
 interface SeriesProps {
     data: ISeries[]
 }
 
-export const Series = ({ data }: SeriesProps) => {
-   console.log('series', data);
+export const Series = ({data}: SeriesProps) => {
+    console.log('series', data);
 
     return (
-        <></>
+        <>{data.map(seriesItem =>
+            <div key={seriesItem.id}>
+                <img src={seriesItem.posterUrl} alt=""/>
+            </div>)}</>
     )
 };
 

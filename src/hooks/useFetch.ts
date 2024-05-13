@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-type ContentType = 'film' | 'series';
+type ContentType = 'film' | 'series'; // Сужение типов
 
 export interface ISeries {
     id: string;
@@ -13,8 +13,10 @@ export interface ISeries {
 }
 
 interface UseFetchResult {
-    data: ISeries[];
+   data: ISeries[]
 }
+
+
 
 const useFetch = (type: ContentType): UseFetchResult => {
     const [data, setData] = useState<ISeries[]>([]);
@@ -37,7 +39,8 @@ const useFetch = (type: ContentType): UseFetchResult => {
 
     }, [type]);
 
-    return {data};
+    return {data}
+
 };
 
 export default useFetch;
