@@ -1,0 +1,11 @@
+.popularSwitch
+{
+    display: flex;
+    align-items: center;
+    align-self: center;
+    width: fit-content;
+    margin-bottom: 32px;
+    background: #00000044;
+    border-radius: 99px;
+}
+

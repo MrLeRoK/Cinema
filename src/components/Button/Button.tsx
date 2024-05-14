@@ -1,5 +1,7 @@
 import React from "react";
-import './Button.module.css'
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-expect-error
+import style from './Button.module.css'
 
 
 type TProps = {
@@ -10,8 +12,12 @@ type TProps = {
 
 export const Button: React.FC<TProps> = ({children, onClick, isActive}) => {
     return (
-        <button className={ isActive ? 'button active' : 'button'} onClick={onClick}>
-            {children}
-        </button>
+
+            <button className={isActive ? style.active : style.button} onClick={onClick}>
+                {children}
+            </button>
+
+
     );
 };
+

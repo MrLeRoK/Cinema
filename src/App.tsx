@@ -9,18 +9,22 @@ import {Series} from "./components/Series/Series.tsx";
 import style from './App.module.css'
 import {TabsSection} from "./components/TabsSection/TabsSection.tsx";
 import {useState} from "react";
+import {SearchMovies} from "./components/SearchMovies/SearchMovies.tsx";
 
 
 export default function App() {
-    const [tab, setTab] = useState('film')
+    const [tab, setTab] = useState<'film' | 'series'>('film')
     const {data: series} = useFetch('series')
     const {data: movies} = useFetch('film')
 
     console.log(style)
 
+
     return (
         <>
-            <TabsSection active={tab} onChange={(current: string) => setTab(current)}/>
+            <SearchMovies/>
+            <TabsSection active={tab} onChange={(current) => setTab(current)}/>
+
             {tab === 'film' && (
                 <>
                     <Movies data={movies}/>
