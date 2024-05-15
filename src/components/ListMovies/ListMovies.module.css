@@ -7,13 +7,13 @@
     gap: 8px;
 
 
-
     .movie_poster_container {
         position: relative;
         overflow: hidden;
         border-radius: 4px;
         /*display: flex;*/
         /*position: relative;*/
+
         .movie_image,
         .movie_poster_container {
             display: block;
@@ -64,9 +64,12 @@
         font-size: 14px;
         color: #dddddd;
         /*box-sizing: border-box;*/
+
     }
 }
 
-
-
+.movie_poster_container:hover {
+    color: #fc0;
+    outline: 4px solid #ffcc00;
+}
 
