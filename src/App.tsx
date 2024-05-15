@@ -10,6 +10,7 @@ import style from './App.module.css'
 import {TabsSection} from "./components/TabsSection/TabsSection.tsx";
 import {useState} from "react";
 import {SearchMovies} from "./components/SearchMovies/SearchMovies.tsx";
+import {Layout} from "./Layout/Layout.tsx";
 
 
 export default function App() {
@@ -21,8 +22,8 @@ export default function App() {
 
 
     return (
-        <>
-            <SearchMovies/>
+       <Layout className={style.container}>
+            <SearchMovies />
             <TabsSection active={tab} onChange={(current) => setTab(current)}/>
 
             {tab === 'film' && (
@@ -37,7 +38,7 @@ export default function App() {
                 </>
             )}
 
-        </>
+       </Layout>
     )
 }
 

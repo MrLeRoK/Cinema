@@ -1,4 +1,5 @@
 import {ISeries} from "../../hooks/useFetch.ts";
+import {ListSeries} from "../ListSeries/ListSeries.tsx";
 
 interface SeriesProps {
     data: ISeries[]
@@ -8,10 +9,9 @@ export const Series = ({data}: SeriesProps) => {
     console.log('series', data);
 
     return (
-        <>{data.map(seriesItem =>
-            <div key={seriesItem.id}>
-                <img src={seriesItem.posterUrl} alt=""/>
-            </div>)}</>
+        <>
+            <ListSeries data={data}/>
+        </>
     )
 };
 
