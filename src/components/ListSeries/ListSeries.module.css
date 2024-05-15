@@ -1,4 +1,4 @@
-.movie_item {
+.series_item {
     /*margin: 20px;*/
     /*position: relative;*/
     position: relative;
@@ -8,19 +8,19 @@
 
 
 
-    .movie_poster_container {
+    .series_poster_container {
         position: relative;
         overflow: hidden;
         border-radius: 4px;
         /*display: flex;*/
         /*position: relative;*/
-        .movie_image,
-        .movie_poster_container {
+        .series_image,
+        .series_poster_container {
             display: block;
             box-shadow: 0 1px 2px #000;
         }
 
-        .movie_image {
+        .series_image {
             min-width: 140px;
             min-height: 200px;
             width: 100%;
@@ -34,7 +34,7 @@
             /*height: auto;*/
         }
 
-        .movie_info {
+        .series_info {
             position: absolute;
             top: 0;
             left: 0;
@@ -46,11 +46,11 @@
             display: flex;
             justify-content: space-between;
 
-            .movie_year {
+            .series_year {
 
             }
 
-            .movie_rating {
+            .series_rating {
 
             }
 
@@ -58,7 +58,7 @@
 
     }
 
-    .movie_title {
+    .series_title {
         text-align: center;
         margin-top: 10px;
         font-size: 14px;

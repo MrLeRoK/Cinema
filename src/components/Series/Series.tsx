@@ -1,6 +1,10 @@
 import {ISeries} from "../../hooks/useFetch.ts";
 import {ListSeries} from "../ListSeries/ListSeries.tsx";
 
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-expect-error
+import style from './Series.module.css'
+
 interface SeriesProps {
     data: ISeries[]
 }
@@ -9,9 +13,9 @@ export const Series = ({data}: SeriesProps) => {
     console.log('series', data);
 
     return (
-        <>
+        <div className={style.container}>
             <ListSeries data={data}/>
-        </>
+        </div>
     )
 };
 
