@@ -1,5 +1,7 @@
 
 import { SeriesProps } from "../Movies/Movies.types";
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-expect-error
 import style from './ListMovies.module.css';
 
 export const ListMovies = ({ data }: SeriesProps) => {
