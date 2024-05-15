@@ -28,7 +28,6 @@ export const SearchMovies = () => {
     return (
 
         <div>
-            <h3 >Input value: {searchTerm}</h3>
             <form className={style.search_form} action="">
             <input className={style.search_input}
                    aria-label="search"
