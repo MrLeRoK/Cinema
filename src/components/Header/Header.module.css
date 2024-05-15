@@ -1,0 +1,21 @@
+.logo {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+
+
+
+    .vodoley {
+
+
+    }
+}
+
+.logo span {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ffffffaa;
+    text-transform: uppercase;
+    text-shadow: 0 1px 2px #000;
+}
