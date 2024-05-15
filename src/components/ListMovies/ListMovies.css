@@ -9,9 +9,16 @@
 }
 
 .movie-poster {
-    display: block;
-    width: 100%; /* Можно изменить на нужный размер */
+    min-width: 140px;
+    min-height: 200px;
+    width: 100%;
     height: auto;
+    aspect-ratio: 1 / 1.5;
+    object-fit: cover;
+    background: #222;
+    /*display: block;*/
+    /*width: 100%; !* Можно изменить на нужный размер *!*/
+    /*height: auto;*/
 }
 
 .movie-info {
@@ -30,5 +37,6 @@
 .movie-title {
     text-align: center;
     margin-top: 10px;
-    font-size: 1.2em;
+    font-size: 1.2rem;
+    color: #dddddd;
 }
