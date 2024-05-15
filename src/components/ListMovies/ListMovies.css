@@ -4,8 +4,8 @@
 }
 
 .movie-poster-container {
+    display: flex;
     position: relative;
-    display: inline-block;
 }
 
 .movie-poster {
