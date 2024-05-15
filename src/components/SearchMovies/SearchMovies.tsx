@@ -1,5 +1,11 @@
 import React, { useState} from "react";
 
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-expect-error
+import style from './SearchMovies.module.css'
+
+
+
 
 export const SearchMovies = () => {
     // const input = useRef<HTMLInputElement>(null)
@@ -18,17 +24,22 @@ export const SearchMovies = () => {
     // }
 
 
+
     return (
 
         <div>
-            <h3 style={{color: 'white'}}>Input value: {searchTerm}</h3>
-            <input type="text"
-                   // ref={input}
-                   // onKeyDown={handleKey}
+            <h3 >Input value: {searchTerm}</h3>
+            <form className={style.search_form} action="">
+            <input className={style.search_input}
+                   aria-label="search"
+                   type="text"
+                   placeholder="Поиск фильмо"
                    value={searchTerm}
                    onChange={handleChange}
+                // ref={input}
+                // onKeyDown={handleKey}
             />
-
+            </form>
         </div>
     )
 }

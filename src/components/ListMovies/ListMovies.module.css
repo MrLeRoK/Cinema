@@ -1,12 +1,27 @@
 .movie_item {
-    margin: 20px;
+    /*margin: 20px;*/
+    /*position: relative;*/
     position: relative;
+    display: grid;
+    align-content: start;
+    gap: 8px;
+
+
 
     .movie_poster_container {
-        display: flex;
         position: relative;
+        overflow: hidden;
+        border-radius: 4px;
+        /*display: flex;*/
+        /*position: relative;*/
 
-        .movie_poster {
+        .movie_image,
+        .movie_poster_container {
+            display: block;
+            box-shadow: 0 1px 2px #000;
+        }
+
+        .movie_image {
             min-width: 140px;
             min-height: 200px;
             width: 100%;
@@ -43,14 +58,16 @@
         }
 
     }
+
+    .movie_title {
+        text-align: center;
+        margin-top: 10px;
+        font-size: 14px;
+        color: #dddddd;
+        /*box-sizing: border-box;*/
+    }
 }
 
 
 
-.movie_title {
-    text-align: center;
-    margin-top: 10px;
-    font-size: 1.2rem;
-    color: #dddddd;
-    /*box-sizing: border-box;*/
-}
+

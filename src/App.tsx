@@ -24,6 +24,7 @@ export default function App() {
     return (
        <Layout className={style.container}>
             <SearchMovies />
+           <div className={style.popular}>
             <TabsSection active={tab} onChange={(current) => setTab(current)}/>
 
             {tab === 'film' && (
@@ -37,6 +38,7 @@ export default function App() {
                     <Series data={series}/>
                 </>
             )}
+           </div>
 
        </Layout>
     )
