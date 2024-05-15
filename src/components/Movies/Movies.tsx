@@ -1,4 +1,4 @@
-// import {ISeries,} from "../../hooks/useFetch.ts";
+
 
 import {SeriesProps} from "./Movies.types.ts";
 import {ListMovies} from "../ListMovies/ListMovies.tsx";
