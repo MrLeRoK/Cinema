@@ -25,6 +25,7 @@ export const SearchMovies = () => {
             <input type="text"
                    ref={input}
                    onKeyDown={handleKey}
+                   // value={searchTerm}
                    // onChange={handleChange}
             />
 
