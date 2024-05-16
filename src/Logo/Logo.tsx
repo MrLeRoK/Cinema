@@ -1,13 +1,13 @@
 export const Logo = () => {
     return (
-        <svg style={{ paddingRight: '10px' }} fill="#ffffffaa" height="30px" width="30px" version="1.1" id="Layer_1"
+        <svg style={{paddingRight: '10px', filter: 'drop-shadow(0 1px 1px #000000)'}} fill="#ffffffaa" height="30px" width="30px" version="1.1" id="Layer_1"
              xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink"
-             viewBox="0 0 512 512" xmlSpace="preserve">
+             viewBox="0 0 384 512" xmlSpace="preserve">
             <g>
                 <g>
-                    <path d="M500.203,236.907L30.869,2.24c-6.613-3.285-14.443-2.944-20.736,0.939C3.84,7.083,0,13.931,0,21.333v469.333
-                    c0,7.403,3.84,14.251,10.133,18.155c3.413,2.112,7.296,3.179,11.2,3.179c3.264,0,6.528-0.747,9.536-2.24l469.333-234.667
-                    C507.435,271.467,512,264.085,512,256S507.435,240.533,500.203,236.907z"/>
+                    <path
+                        d="M 73 39 c -14.8 -9.1 -33.4 -9.4 -48.5 -0.9 S 0 62.6 0 80 V 432 c 0 17.4 9.4 33.4 24.5 41.9 s
+                         33.7 8.1 48.5 -0.9 L 361 297 c 14.3 -8.7 23 -24.2 23 -41 s -8.7 -32.2 -23 -41 L 73 39 Z"/>
                 </g>
             </g>
         </svg>

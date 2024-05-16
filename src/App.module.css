@@ -4,13 +4,15 @@ body {
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
     color: #ddd;
-    background: #3a3938;
+    background: linear-gradient(90deg, #5283a6 0%, #182848 100%);
+    transition: background 5s ease-in-out;
 }
 
 .container {
     max-width: 1000px;
     padding: 0 16px;
     margin: 0 auto;
+    /*background: linear-gradient(45deg, #ff8a00, #e52e71);*/
     /*display: flex;*/
     /*flex-direction: column;*/
     /*align-items: center;*/

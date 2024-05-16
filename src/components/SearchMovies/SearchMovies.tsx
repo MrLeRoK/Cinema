@@ -3,6 +3,7 @@ import React, { useState} from "react";
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-expect-error
 import style from './SearchMovies.module.css'
+import {SearchLogo} from "./SearchLogo.tsx";
 
 
 
@@ -38,6 +39,10 @@ export const SearchMovies = () => {
                 // ref={input}
                 // onKeyDown={handleKey}
             />
+                <button className={style.search_button}>
+                    <SearchLogo/>
+                </button>
+
             </form>
         </div>
     )

@@ -8,7 +8,7 @@ export const Header = () => {
             <div className={style.container}>
                 <a className={style.logo} href="">
                     <Logo/>
-                    <span className={style.vodoley}>VODOLEYBOX.IN</span>
+                    <span className={style.vodoley}>VODOLEYBOX.TV</span>
                 </a>
             </div>
         </header>
