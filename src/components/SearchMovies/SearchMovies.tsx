@@ -20,7 +20,9 @@ export const SearchMovies = ({data}: SeriesProps) => {
     function handleChange(event: React.ChangeEvent<HTMLInputElement>) {
         console.log(event.target.value);
         setSearchTerm(event.target.value);
+
     }
+
 
     // function handleKey(event: React.KeyboardEvent<HTMLInputElement>) {
     //     if (event.key === 'Enter') {
