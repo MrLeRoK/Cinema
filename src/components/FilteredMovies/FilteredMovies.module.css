@@ -1,0 +1,78 @@
+.movie_item {
+    /*margin: 20px;*/
+    /*position: relative;*/
+    position: relative;
+    display: grid;
+    align-content: start;
+    gap: 8px;
+
+
+    .movie_poster_container {
+        position: relative;
+        overflow: hidden;
+        border-radius: 4px;
+        /*display: flex;*/
+        /*position: relative;*/
+
+        .movie_image,
+        .movie_poster_container {
+            display: block;
+            box-shadow: 0 1px 2px #000;
+        }
+
+        .movie_image {
+            min-width: 140px;
+            min-height: 200px;
+            width: 100%;
+            height: auto;
+            aspect-ratio: 1 / 1.5;
+            object-fit: cover;
+            background: #222;
+
+            /*display: block;*/
+            /*width: 100%; !* Можно изменить на нужный размер *!*/
+            /*height: auto;*/
+        }
+
+        .movie_info {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            /*background: rgba(0, 0, 0, 0.5); !* Полупрозрачный черный фон *!*/
+            color: white;
+            padding: 10px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-between;
+
+            .movie_year {
+
+            }
+
+            .movie_rating {
+
+            }
+
+        }
+
+    }
+
+    .movie_title {
+        text-align: center;
+        margin-top: 10px;
+        font-size: 14px;
+        color: #dddddd;
+        /*box-sizing: border-box;*/
+
+    }
+}
+
+.movie_poster_container:hover   {
+    color: #fc0;
+    outline: 4px solid #ffcc00;
+}
+
+.movie_poster_container:hover ~ .movie_title {
+    color: #fc0;
+}

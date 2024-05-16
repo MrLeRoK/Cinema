@@ -1,14 +1,18 @@
-import React, { useState} from "react";
+import React, {useState} from "react";
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-expect-error
 import style from './SearchMovies.module.css'
 import {SearchLogo} from "./SearchLogo.tsx";
+import {ISeries} from "../../hooks/useFetch.ts";
+import {FilteredMovies} from "../FilteredMovies/FilteredMovies.tsx";
+
+interface SeriesProps {
+    data: ISeries[]
+}
 
 
-
-
-export const SearchMovies = () => {
+export const SearchMovies = ({data}: SeriesProps) => {
     // const input = useRef<HTMLInputElement>(null)
     // const [loading, setLoading] = useState(false)
     const [searchTerm, setSearchTerm] = useState('');
@@ -25,20 +29,20 @@ export const SearchMovies = () => {
     // }
 
 
-
     return (
 
         <div>
             <form className={style.search_form} action="">
-            <input className={style.search_input}
-                   aria-label="search"
-                   type="text"
-                   placeholder="Поиск фильмо"
-                   value={searchTerm}
-                   onChange={handleChange}
-                // ref={input}
-                // onKeyDown={handleKey}
-            />
+                <input className={style.search_input}
+                       aria-label="search"
+                       type="text"
+                       placeholder="Поиск фильмо"
+                       value={searchTerm}
+                       onChange={handleChange}
+                    // ref={input}
+                    // onKeyDown={handleKey}
+                />
+                {searchTerm && <FilteredMovies data={data} searchTerm={searchTerm}/>}
                 <button className={style.search_button}>
                     <SearchLogo/>
                 </button>

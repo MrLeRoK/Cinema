@@ -24,7 +24,7 @@ export default function App() {
     return (
         <Layout className={style.container}>
             <Header/>
-            <SearchMovies/>
+            <SearchMovies data={movies}/>
             <div className={style.popular}>
                 <TabsSection active={tab} onChange={(current) => setTab(current)}/>
 
