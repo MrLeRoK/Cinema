@@ -68,8 +68,12 @@
     }
 }
 
-.movie_poster_container:hover {
+.movie_poster_container:hover   {
     color: #fc0;
     outline: 4px solid #ffcc00;
+}
+
+.movie_poster_container:hover ~ .movie_title {
+    color: #fc0;
 }
 

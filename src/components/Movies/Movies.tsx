@@ -8,7 +8,13 @@ import style from './Movies.module.css';
 
 export const Movies = ({data}: SeriesProps) => {
 
-    console.log('movies: ', data);
+    // const getObjValue = (data) => {
+    //     return data.map(movie => ({
+    //         ...movie,
+    //         newProperty: 'newValue'
+    //     }));
+    // };
+
 
     return (
         <div className={style.container}>

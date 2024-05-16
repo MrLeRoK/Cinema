@@ -10,7 +10,7 @@ export const ListSeries = ({data} : SeriesProps) => {
             {data.map(seriesItem => (
                 <div className={style.series_item} key={seriesItem.id}>
                     <div className={style.series_poster_container}>
-                        <img src={seriesItem.posterUrl} alt="" className={style.series_image} />
+                        <img src={seriesItem.posterUrl} alt={seriesItem.title} className={style.series_image} />
                         <div className={style.series_info}>
                             <div className={style.series_year}>{seriesItem.year}</div>
                             <div className={style.series_rating}>{Number(seriesItem.rating).toFixed(1)}</div>

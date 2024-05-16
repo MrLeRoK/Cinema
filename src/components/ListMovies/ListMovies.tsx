@@ -1,4 +1,3 @@
-
 import { SeriesProps } from "../Movies/Movies.types";
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -6,12 +5,14 @@ import { SeriesProps } from "../Movies/Movies.types";
 import style from './ListMovies.module.css';
 
 export const ListMovies = ({ data }: SeriesProps) => {
+console.log(data)
+
     return (
         <>
             {data.map(moviesItem => (
                 <div className={style.movie_item} key={moviesItem.id}>
                     <div className={style.movie_poster_container}>
-                        <img src={moviesItem.posterUrl} alt="" className={style.movie_image} />
+                        <img src={moviesItem.posterUrl} alt={moviesItem.title} className={style.movie_image} />
                         <div className={style.movie_info}>
                             <div className={style.movie_year}>{moviesItem.year}</div>
                             <div className={style.movie_rating}>{Number(moviesItem.rating).toFixed(1)}</div>
