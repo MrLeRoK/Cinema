@@ -27,7 +27,13 @@ export const Header: React.FC<HeaderProps> = ({onClick}) => {
                     <Logo/>
                     <span onClick={onClick} className={style.vodoley}>VODOLEYBOX.TV</span>
                 </a>
-                <span>{now.toLocaleTimeString()}</span>
+                <div className={style.now_data}>
+                    <span className={style.time_circle}>{now.getHours().toString().padStart(2, '0')}</span>
+                    <span className={style.time_separator}>:</span>
+                    <span className={style.time_circle}>{now.getMinutes().toString().padStart(2, '0')}</span>
+                    <span className={style.time_separator}>:</span>
+                    <span className={style.time_circle}>{now.getSeconds().toString().padStart(2, '0')}</span>
+                </div>
             </div>
         </header>
     );
