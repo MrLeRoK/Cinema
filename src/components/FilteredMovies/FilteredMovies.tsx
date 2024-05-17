@@ -7,15 +7,13 @@ import style from './FilteredMovies.module.css'
 
 interface FilteredMoviesProps {
     data: ISeries[];
-    searchTerm: string;
 }
 
-export const FilteredMovies: React.FC<FilteredMoviesProps> = ({ data, searchTerm }) => {
-    const filteredMovies = data.filter(movie => movie.title.toLowerCase().includes(searchTerm.toLowerCase()));
+export const FilteredMovies: React.FC<FilteredMoviesProps> = ({ data }) => {
 
     return (
         <>
-            {filteredMovies.map(movieItem => (
+            {data.map(movieItem => (
                 <div className={style.movie_item} key={movieItem.id}>
                     <div className={style.movie_poster_container}>
                         <img src={movieItem.posterUrl} alt={movieItem.title} className={style.movie_image} />

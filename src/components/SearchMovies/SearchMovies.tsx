@@ -1,25 +1,26 @@
-import React, {useState} from "react";
+import React, { useState} from "react";
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-expect-error
 import style from './SearchMovies.module.css'
 import {SearchLogo} from "./SearchLogo.tsx";
-import {ISeries} from "../../hooks/useFetch.ts";
-import {FilteredMovies} from "../FilteredMovies/FilteredMovies.tsx";
 
-interface SeriesProps {
-    data: ISeries[]
+interface SearchMoviesProps {
+    onSearch: (searchTerm: string) => void;
 }
 
 
-export const SearchMovies = ({data}: SeriesProps) => {
+export const SearchMovies = ({onSearch}: SearchMoviesProps) => {
     // const input = useRef<HTMLInputElement>(null)
     // const [loading, setLoading] = useState(false)
     const [searchTerm, setSearchTerm] = useState('');
 
+
+
     function handleChange(event: React.ChangeEvent<HTMLInputElement>) {
-        console.log(event.target.value);
+
         setSearchTerm(event.target.value);
+        onSearch(searchTerm)
 
     }
 
@@ -44,7 +45,6 @@ export const SearchMovies = ({data}: SeriesProps) => {
                     // ref={input}
                     // onKeyDown={handleKey}
                 />
-                {searchTerm && <FilteredMovies data={data} searchTerm={searchTerm}/>}
                 <button className={style.search_button}>
                     <SearchLogo/>
                 </button>
