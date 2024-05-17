@@ -7,7 +7,7 @@ import style from './Header.module.css'
 
 
 interface HeaderProps {
-    onClick: (event: React.MouseEvent<HTMLSpanElement>) => void;
+    onClick: (event: React.MouseEvent<HTMLSpanElement, MouseEvent>) => void;
 }
 export const Header: React.FC<HeaderProps> = ({onClick}) => {
     return (

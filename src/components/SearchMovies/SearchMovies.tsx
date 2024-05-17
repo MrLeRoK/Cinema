@@ -18,9 +18,8 @@ export const SearchMovies = ({onSearch}: SearchMoviesProps) => {
 
 
     function handleChange(event: React.ChangeEvent<HTMLInputElement>) {
-
         setSearchTerm(event.target.value);
-        onSearch(searchTerm)
+        onSearch(event.target.value)
 
     }
 

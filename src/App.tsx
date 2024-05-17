@@ -25,7 +25,8 @@ export default function App() {
     }
 
       function handleMovies() {
-          setTab(tab)
+          setTab('film')
+          setSearchTerm('')
     }
 
   const filteredData = searchTerm ? [...movies, ...series].filter(movie => {
