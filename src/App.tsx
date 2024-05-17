@@ -24,14 +24,14 @@ export default function App() {
         setSearchTerm(term)
     }
 
-      function handleMovies() {
-          setTab('film')
-          setSearchTerm('')
+    function handleMovies() {
+        setTab('film')
+        setSearchTerm('')
     }
 
-  const filteredData = searchTerm ? [...movies, ...series].filter(movie => {
-      return movie.title.toLowerCase().includes(searchTerm.toLocaleLowerCase())
-  }) : (tab === 'film' ? movies : series)
+    const filteredData = searchTerm ? [...movies, ...series].filter(movie => {
+        return movie.title.toLowerCase().includes(searchTerm.toLocaleLowerCase())
+    }) : (tab === 'film' ? movies : series)
 
 
     // const displayData = searchTerm ? filteredData : (tab === "film" ? movies : series)
@@ -47,14 +47,3 @@ export default function App() {
         </Layout>
     )
 }
-
-// { searchTerm ? (
-//     <FilteredMovies data={popularMovies} />
-// ): (
-//     <>
-//         {tab === 'film' && <Movies data={movies}/>}
-//         {tab === 'series' && <Series data={series}/>}
-//     </>
-// )
-//
-// }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 
 import {Logo} from "../../Logo/Logo.tsx";
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -10,6 +10,16 @@ interface HeaderProps {
     onClick: (event: React.MouseEvent<HTMLSpanElement, MouseEvent>) => void;
 }
 export const Header: React.FC<HeaderProps> = ({onClick}) => {
+    const [now, setNow] = useState(new Date())
+
+    useEffect(() => {
+        const intervalId = setInterval(() => setNow(new Date()), 1000)
+
+        return () => {
+            clearInterval(intervalId)
+        }
+    }, [now]);
+
     return (
         <header>
             <div className={style.container}>
@@ -17,6 +27,7 @@ export const Header: React.FC<HeaderProps> = ({onClick}) => {
                     <Logo/>
                     <span onClick={onClick} className={style.vodoley}>VODOLEYBOX.TV</span>
                 </a>
+                <span>{now.toLocaleTimeString()}</span>
             </div>
         </header>
     );
