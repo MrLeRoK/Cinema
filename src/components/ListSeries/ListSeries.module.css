@@ -67,6 +67,15 @@
     }
 }
 
+.series_poster_container:hover   {
+    color: #fc0;
+    outline: 4px solid #ffcc00;
+}
+
+.series_poster_container:hover ~ .series_title {
+    color: #fc0;
+}
+
 
 
 
