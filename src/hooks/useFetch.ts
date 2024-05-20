@@ -16,6 +16,9 @@ interface UseFetchResult {
    data: ISeries[]
 }
 
+// http://www.omdbapi.com/?apikey=a18c60c9
+// https://api.kinopoisk.dev/v1.4/movie?year=2023&genres.name=криминал
+// https://kinobox.tv/api/films/popular?type=${type}
 
 
 const useFetch = (type: ContentType): UseFetchResult => {
