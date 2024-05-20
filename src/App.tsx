@@ -72,7 +72,7 @@ export default function App() {
                             <div key={item.id}>
                                 <img style={{width: '161px', height: '242px'}}
                                      src={item.poster?.url} alt={item.title}
-                                     className={style.series_image}/>
+                                />
                             </div>)}
                     </div>
                 ): (tab === 'film' ? <Movies data={filteredData}/> : <Series data={filteredData}/>)}
