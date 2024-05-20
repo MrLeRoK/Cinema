@@ -12,8 +12,12 @@ export const ListSeries = ({data} : SeriesProps) => {
                     <div className={style.series_poster_container}>
                         <img src={seriesItem.posterUrl} alt={seriesItem.title} className={style.series_image} />
                         <div className={style.series_info}>
-                            <div className={style.series_year}>{seriesItem.year}</div>
-                            <div className={style.series_rating}>{Number(seriesItem.rating).toFixed(1)}</div>
+                            <div className={style.container_series_year}>
+                                <div className={style.series_year}>{seriesItem.year}</div>
+                            </div>
+                            <div className={style.container_series_rating}>
+                                <div className={style.series_rating}>{Number(seriesItem.rating).toFixed(1)}</div>
+                            </div>
                         </div>
                     </div>
                     <div className={style.series_title}>{seriesItem.title}</div>

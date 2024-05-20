@@ -7,13 +7,13 @@
     gap: 8px;
 
 
-
     .series_poster_container {
         position: relative;
         overflow: hidden;
         border-radius: 4px;
         /*display: flex;*/
         /*position: relative;*/
+
         .series_image,
         .series_poster_container {
             display: block;
@@ -41,41 +41,58 @@
             width: 100%;
             /*background: rgba(0, 0, 0, 0.5); !* Полупрозрачный черный фон *!*/
             color: white;
-            padding: 10px;
+            padding: 5px;
             box-sizing: border-box;
             display: flex;
             justify-content: space-between;
 
-            .series_year {
+            .container_series_year {
+                width: 35px;
+                background: rgba(45, 41, 41, 0.5);
+
+                .series_year {
+                    text-align: center;
+                }
 
             }
 
-            .series_rating {
+            .container_series_rating {
+                width: 22px;
+                background: rgba(45, 41, 41, 0.5);
+                /*background: #000000cc;*/
+
+                .series_rating {
+                    text-align: center;
+                }
 
             }
 
         }
 
+        .series_image,
+        .series_poster_container {
+            display: block;
+            box-shadow: 0 1px 2px #000;
+        }
+
+        .series_title {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 14px;
+            color: #dddddd;
+            /*box-sizing: border-box;*/
+        }
     }
 
-    .series_title {
-        text-align: center;
-        margin-top: 10px;
-        font-size: 14px;
-        color: #dddddd;
-        /*box-sizing: border-box;*/
+    .series_poster_container:hover {
+        color: #fc0;
+        outline: 4px solid #ffcc00;
     }
+
+    .series_poster_container:hover ~ .series_title {
+        color: #fc0;
+    }
+
 }
-
-.series_poster_container:hover   {
-    color: #fc0;
-    outline: 4px solid #ffcc00;
-}
-
-.series_poster_container:hover ~ .series_title {
-    color: #fc0;
-}
-
-
 
 
