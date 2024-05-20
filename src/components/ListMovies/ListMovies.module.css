@@ -57,8 +57,13 @@
                 background: rgba(45, 41, 41, 0.5);
                 /*background: #000000cc;*/
 
+                .movie_rating {
+                    text-align: center;
+
+                }
+
                 .high_rating {
-                    background: #06f106; /* цвет для рейтинга >= 7 */
+                    background: #06f106;
                 }
 
                 .average_rating {
@@ -66,12 +71,7 @@
                 }
 
                 .low_rating {
-                    background: #ef0505; /* цвет для рейтинга < 7 */
-                }
-
-                .movie_rating {
-                    text-align: center;
-
+                    background: #ef0505;
                 }
 
             }
