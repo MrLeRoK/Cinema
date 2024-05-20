@@ -63,11 +63,11 @@
                 }
 
                 .high_rating {
-                    background: #32cd32;
+                    background: rgba(62, 222, 8, 0.6);
                 }
 
                 .average_rating {
-                    background: #444444;
+                    background: rgba(55, 56, 54, 0.6);
                 }
 
                 .low_rating {
