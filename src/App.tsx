@@ -61,48 +61,26 @@ export default function App() {
             <div className={style.popular}>
                 <TabsSection active={tab} onChange={(current) => setTab(current)}/>
                 {tab === 'new' ? (
-                    <div style={{
-                        display: 'flex',
-                        gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))',
-                        gap: '24px',
-                        flexWrap: 'wrap'
-                    }}>
-                        {newMovies.filter(item => item.poster?.url)
-                            .map(item =>
-                            <div key={item.id}>
-                                <img style={{width: '161px', height: '242px'}}
-                                     src={item.poster?.url} alt={item.title}
-                                />
-                            </div>)}
-                    </div>
-                ): (tab === 'film' ? <Movies data={filteredData}/> : <Series data={filteredData}/>)}
+                        <div style={{
+                            display: 'flex',
+                            gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))',
+                            gap: '24px',
+                            flexWrap: 'wrap'
+                        }}>
+                            {newMovies.filter(item => item.poster?.url)
+                                .map(item =>
+                                    <div key={item.id}>
+                                        <img style={{width: '161px', height: '242px'}}
+                                             src={item.poster?.url} alt={item.title}
+                                        />
+                                    </div>)}
+                        </div>
+                    ) :
+                    (tab === 'film' ? <Movies data={filteredData}/> : <Series data={filteredData}/>)}
             </div>
         </Layout>
     )
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 // export default function App() {
@@ -135,13 +113,10 @@ export default function App() {
 //         setSearchTerm('')
 //     }
 //
-//     // const filteredData = searchTerm ? [...movies, ...series].filter(movie => {
-//     //     return movie.title.toLowerCase().includes(searchTerm.toLocaleLowerCase())
-//     // }) : (tab === 'film' ? movies : series)
+//      const filteredData = searchTerm ? [...movies, ...series].filter(movie => {
+//          return movie.title.toLowerCase().includes(searchTerm.toLocaleLowerCase())
+//      }) : (tab === 'film' ? movies : series)
 //
-//     const filteredData = searchTerm ? [...movies, ...series, ...newMovies].filter(movie => {
-//         return movie.title.toLowerCase().includes(searchTerm.toLowerCase());
-//     }) : (tab === 'film' ? movies : (tab === 'series' ? series : newMovies));
 //
 //
 //     // const displayData = searchTerm ? filteredData : (tab === "film" ? movies : series)
