@@ -11,7 +11,7 @@ export const ListMovies = ({data}: SeriesProps) => {
     return (
         <>
             {data.map(moviesItem => {
-                const ratingClass = moviesItem.rating >= 7
+                const ratingMovies = moviesItem.rating >= 7
                     ? style.high_rating
                     : moviesItem.rating >= 5
                         ? style.average_rating
@@ -26,7 +26,7 @@ export const ListMovies = ({data}: SeriesProps) => {
                                     <div className={style.movie_year}>{moviesItem.year}</div>
                                 </div>
                                 <div className={style.container_movie_rating}>
-                                    <div className={`${style.movie_rating} ${ratingClass}`}>
+                                    <div className={`${style.movie_rating} ${ratingMovies}`}>
                                         {Number(moviesItem.rating).toFixed(1)}
                                     </div>
                                 </div>
