@@ -21,7 +21,7 @@ export default function App() {
     const [newMovies, setMewMovies] = useState<any[]>([]);
 
     React.useEffect(() => {
-        fetch('https://api.kinopoisk.dev/v1.4/movie?type=movie&limit=100', {
+        fetch('https://api.kinopoisk.dev/v1.4/movie?externalId.tmdb=!666&limit=100', {
             headers: {
                 'x-api-key': 'AHQQ6Z1-8S4MCYZ-P074AHD-KSY9APN'
             }
@@ -67,12 +67,13 @@ export default function App() {
                             gap: '24px',
                             flexWrap: 'wrap'
                         }}>
-                            {newMovies.filter(item => item.poster?.url)
+                            {newMovies.filter(item => item.poster?.url) // && item.rating.imdb !== 0
                                 .map(item =>
                                     <div key={item.id}>
                                         <img style={{width: '161px', height: '242px'}}
                                              src={item.poster?.url} alt={item.title}
                                         />
+                                        {item.name}
                                     </div>)}
                         </div>
                     ) :
