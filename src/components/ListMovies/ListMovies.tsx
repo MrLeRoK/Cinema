@@ -14,8 +14,12 @@ console.log(data)
                     <div className={style.movie_poster_container}>
                         <img src={moviesItem.posterUrl} alt={moviesItem.title} className={style.movie_image} />
                         <div className={style.movie_info}>
-                            <div className={style.movie_year}>{moviesItem.year}</div>
-                            <div className={style.movie_rating}>{Number(moviesItem.rating).toFixed(1)}</div>
+                            <div className={style.container_movie_year}>
+                                <div className={style.movie_year}>{moviesItem.year}</div>
+                            </div>
+                            <div className={style.container_movie_rating}>
+                                <div className={style.movie_rating}>{Number(moviesItem.rating).toFixed(1)}</div>
+                            </div>
                         </div>
                     </div>
                     <div className={style.movie_title}>{moviesItem.title}</div>

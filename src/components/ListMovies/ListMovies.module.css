@@ -14,11 +14,6 @@
         /*display: flex;*/
         /*position: relative;*/
 
-        .movie_image,
-        .movie_poster_container {
-            display: block;
-            box-shadow: 0 1px 2px #000;
-        }
 
         .movie_image {
             min-width: 140px;
@@ -41,21 +36,41 @@
             width: 100%;
             /*background: rgba(0, 0, 0, 0.5); !* Полупрозрачный черный фон *!*/
             color: white;
-            padding: 10px;
+            padding: 5px;
             box-sizing: border-box;
             display: flex;
             justify-content: space-between;
 
-            .movie_year {
+            .container_movie_year {
+                width: 35px;
+                background: rgba(45, 41, 41, 0.5);
+
+                .movie_year {
+                    text-align: center;
+
+                }
 
             }
 
-            .movie_rating {
+            .container_movie_rating {
+                width: 22px;
+                background: rgba(45, 41, 41, 0.5);
+                /*background: #000000cc;*/
+
+                .movie_rating {
+                    text-align: center;
+                }
 
             }
 
         }
 
+    }
+
+    .movie_image,
+    .movie_poster_container {
+        display: block;
+        box-shadow: 0 1px 2px #000;
     }
 
     .movie_title {
