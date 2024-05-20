@@ -57,8 +57,21 @@
                 background: rgba(45, 41, 41, 0.5);
                 /*background: #000000cc;*/
 
+                .high_rating {
+                    background: #06f106; /* цвет для рейтинга >= 7 */
+                }
+
+                .average_rating {
+                    background: #444444;
+                }
+
+                .low_rating {
+                    background: #ef0505; /* цвет для рейтинга < 7 */
+                }
+
                 .movie_rating {
                     text-align: center;
+
                 }
 
             }

@@ -5,6 +5,8 @@ import {SeriesProps} from "../Movies/Movies.types.ts";
 import style from './ListSeries.module.css'
 
 export const ListSeries = ({data} : SeriesProps) => {
+
+
     return (
         <>
             {data.map(seriesItem => (
