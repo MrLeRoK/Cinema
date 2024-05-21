@@ -11,14 +11,11 @@
         position: relative;
         overflow: hidden;
         border-radius: 4px;
+        box-shadow: 0 1px 2px #000;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
         /*display: flex;*/
         /*position: relative;*/
 
-        .series_image,
-        .series_poster_container {
-            display: block;
-            box-shadow: 0 1px 2px #000;
-        }
 
         .series_image {
             min-width: 140px;
@@ -28,7 +25,7 @@
             aspect-ratio: 1 / 1.5;
             object-fit: cover;
             background: #222;
-
+            transition: transform 0.3s ease;
             /*display: block;*/
             /*width: 100%; !* Можно изменить на нужный размер *!*/
             /*height: auto;*/
@@ -52,6 +49,7 @@
 
                 .series_year {
                     text-align: center;
+
                 }
 
             }
@@ -63,6 +61,7 @@
 
                 .series_rating {
                     text-align: center;
+
                 }
 
                 .high_rating {
@@ -74,37 +73,37 @@
                 }
 
                 .low_rating {
-                    background: #ef0505; /* цвет для рейтинга < 7 */
+                    background: #ef0505;
                 }
 
             }
 
         }
 
-        .series_image,
-        .series_poster_container {
-            display: block;
-            box-shadow: 0 1px 2px #000;
-        }
-
-        .series_title {
-            text-align: center;
-            margin-top: 10px;
-            font-size: 14px;
-            color: #dddddd;
-            /*box-sizing: border-box;*/
-        }
     }
 
-    .series_poster_container:hover {
-        color: #fc0;
-        outline: 4px solid #ffcc00;
+    .series_image,
+    .series_poster_container {
+        display: block;
+        box-shadow: 0 1px 2px #000;
     }
 
-    .series_poster_container:hover ~ .series_title {
-        color: #fc0;
-    }
+    .series_title {
+        text-align: center;
+        margin-top: 10px;
+        font-size: 14px;
+        color: #dddddd;
+        /*box-sizing: border-box;*/
 
+    }
 }
 
+.series_poster_container:hover {
+    transform: scale(1.1) translateZ(10px);
+    color: #fc0;
+}
+
+.series_poster_container:hover ~ .series_title {
+    color: #fc0;
+}
 
