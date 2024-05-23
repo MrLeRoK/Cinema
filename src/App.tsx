@@ -12,7 +12,6 @@ import {SearchMovies} from "./components/SearchMovies/SearchMovies.tsx";
 import {Layout} from "./Layout/Layout.tsx";
 import {Header} from "./components/Header/Header.tsx";
 
-
 export default function App() {
     const [tab, setTab] = useState<'film' | 'series' | 'new'>('film')
     const {data: series} = useFetch('series')
