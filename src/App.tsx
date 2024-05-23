@@ -21,7 +21,7 @@ export default function App() {
     const [newMovies, setMewMovies] = useState<any[]>([]);
 
     React.useEffect(() => {
-        fetch('https://api.kinopoisk.dev/v1.4/movie?rating.kp=7-10&year=1990&notNullFields=alternativeName&limit=100', {
+        fetch('https://api.kinopoisk.dev/v1.4/movie?rating.imdb=6-10&type=movie&year=2012-2024&genres.name=ужасы&limit=100', {
             headers: {
                 'x-api-key': 'AHQQ6Z1-8S4MCYZ-P074AHD-KSY9APN'
             }
